@@ -38,10 +38,10 @@ while True:
     if gold_usd and rate:
         gold_eur = gold_usd * rate
         now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
-        message = f"[{now}]
+        message = f"""[{now}]
 Prezzo oro:
 - {gold_usd:.2f} USD/oz
-- {gold_eur:.2f} EUR/oz"
+- {gold_eur:.2f} EUR/oz"""
         bot.send_message(chat_id=CHAT_ID, text=message)
 
     time.sleep(21600)  # ogni 6 ore
